@@ -46,7 +46,7 @@ start_instance() {
 	[ -e /proc/sys/kernel/core_pattern ] && {
 		procd_append_param limits core="unlimited"
 	}
-	procd_set_param command /usr/bin/chinadns -m
+	procd_set_param command /usr/bin/chinadns
 	append_parm $1 addr "-b"
 	append_parm $1 port "-p"
 	append_parm $1 server "-s"
